@@ -1,8 +1,11 @@
 package it.mbaziekone.online_shop.service;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
+import it.mbaziekone.online_shop.model.Product;
+
 public interface ProductService {
+	
+	public List<Product> findAll();
 
 }

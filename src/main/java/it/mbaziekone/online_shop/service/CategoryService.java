@@ -1,8 +1,12 @@
 package it.mbaziekone.online_shop.service;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
+
+import it.mbaziekone.online_shop.model.Category;
+
 public interface CategoryService {
+	
+	public List<Category> categories();
 
 }

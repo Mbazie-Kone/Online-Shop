@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import it.mbaziekone.online_shop.service.ProductService;
 
 @Controller
-@RequestMapping("product")
+@RequestMapping("/product")
 public class ProductController {
 	
 	@Autowired
@@ -18,7 +18,7 @@ public class ProductController {
 	@GetMapping("/")
 	@ResponseBody
 	public String index() {
-		
-		return "Hello World";
+		productService.findAll();
+		return "Product page";
 	}
 }
