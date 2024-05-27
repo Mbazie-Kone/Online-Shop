@@ -8,6 +8,6 @@ import it.mbaziekone.oline_shop.service.CategoryService;
 public class CategoryServiceImpl implements CategoryService {
 	
 	@Autowired
-	CategoryRepository categoryRepository;
+	private CategoryRepository categoryRepository;
 
 }

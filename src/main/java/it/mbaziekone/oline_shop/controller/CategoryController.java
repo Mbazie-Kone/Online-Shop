@@ -5,13 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import it.mbaziekone.oline_shop.service.ProductService;
+import it.mbaziekone.oline_shop.service.CategoryService;
 
 @Controller
-public class ProductController {
+public class CategoryController {
 	
 	@Autowired
-	private ProductService productService;
+	private CategoryService categoryService;
 	
 	@GetMapping("/")
 	@ResponseBody
@@ -19,4 +19,5 @@ public class ProductController {
 		
 		return "Hello World";
 	}
+
 }

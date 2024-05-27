@@ -8,5 +8,5 @@ import it.mbaziekone.oline_shop.service.ProductService;
 public class ProductServiceImpl implements ProductService {
 	
 	@Autowired
-	ProductRepository productRepository;
+	private ProductRepository productRepository;
 }
