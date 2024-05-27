@@ -1,4 +1,4 @@
-package it.mbaziekone.oline_shop.model;
+package it.mbaziekone.online_shop.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

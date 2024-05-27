@@ -1,9 +1,9 @@
-package it.mbaziekone.oline_shop.service.impl;
+package it.mbaziekone.online_shop.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import it.mbaziekone.oline_shop.repository.ProductRepository;
-import it.mbaziekone.oline_shop.service.ProductService;
+import it.mbaziekone.online_shop.repository.ProductRepository;
+import it.mbaziekone.online_shop.service.ProductService;
 
 public class ProductServiceImpl implements ProductService {
 	
