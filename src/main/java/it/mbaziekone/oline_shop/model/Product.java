@@ -1,5 +1,6 @@
 package it.mbaziekone.oline_shop.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,6 +13,7 @@ public class Product {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "product_id")
 	private Long id;
 	
 	private String name;
@@ -22,5 +24,6 @@ public class Product {
 	
 	private Category category;
 	
+	@Column(name = "image_url")
 	private String imageUrl;
 }
