@@ -15,5 +15,5 @@ public class Product {
 	
 	private double price;
 	
-	private String 
+	private Category category;
 }
