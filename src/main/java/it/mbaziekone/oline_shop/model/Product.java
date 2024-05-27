@@ -22,8 +22,6 @@ public class Product {
 	
 	private double price;
 	
-	private Category category;
-	
 	@Column(name = "image_url")
 	private String imageUrl;
 	
@@ -51,14 +49,6 @@ public class Product {
 
 	public void setPrice(double price) {
 		this.price = price;
-	}
-
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
 	}
 
 	public String getImageUrl() {
