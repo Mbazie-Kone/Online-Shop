@@ -6,6 +6,6 @@ import it.mbaziekone.online_shop.model.Category;
 
 public interface CategoryService {
 	
-	public List<Category> categories();
+	public List<Category> findAllCategories();
 
 }

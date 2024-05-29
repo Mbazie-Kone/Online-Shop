@@ -6,6 +6,6 @@ import it.mbaziekone.online_shop.model.Product;
 
 public interface ProductService {
 	
-	public List<Product> findAll();
+	public List<Product> findAllProducts();
 
 }
