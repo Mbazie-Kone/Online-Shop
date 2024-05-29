@@ -22,6 +22,7 @@ public class Product {
 	
 	private double price;
 	
+	@Column(name = "stock_quantity")
 	private int stockQuantity;
 	
 	private Category category;
@@ -29,8 +30,10 @@ public class Product {
 	@Column(name = "image_url")
 	private String imageUrl;
 	
+	@Column(name = "average_rating")
 	private double averageRating;
 	
+	@Column(name = "review_count")
 	private int reviewCount;
 
 
