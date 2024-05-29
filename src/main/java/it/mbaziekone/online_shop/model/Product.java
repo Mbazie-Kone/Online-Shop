@@ -22,10 +22,16 @@ public class Product {
 	
 	private double price;
 	
+	private int stockQuantity;
+	
+	private Category category;
+	
 	@Column(name = "image_url")
 	private String imageUrl;
 	
-	private String sku;
+	private double averageRating;
+	
+	private int reviewCount;
 
 
 }
