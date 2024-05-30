@@ -90,13 +90,11 @@ public class Product {
 		this.stockQuantity = stockQuantity;
 	}
 
-	public Category getCategory() {
-		return category;
-	}
-
-	public void setCategory(Category category) {
-		this.category = category;
-	}
+	/*
+	 * public Category getCategory() { return category; }
+	 * 
+	 * public void setCategory(Category category) { this.category = category; }
+	 */
 
 	public String getImageUrl() {
 		return imageUrl;
@@ -145,10 +143,11 @@ public class Product {
 				&& reviewCount == other.reviewCount && stockQuantity == other.stockQuantity;
 	}
 
-	@Override
-	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price
-				+ ", stockQuantity=" + stockQuantity + ", category=" + category + ", imageUrl=" + imageUrl
-				+ ", averageRating=" + averageRating + ", reviewCount=" + reviewCount + "]";
-	}
+	
+	  @Override public String toString() { return "Product [id=" + id + ", name=" +
+	  name + ", description=" + description + ", price=" + price +
+	  ", stockQuantity=" + stockQuantity + ", category=" + category + ", imageUrl="
+	  + imageUrl + ", averageRating=" + averageRating + ", reviewCount=" +
+	  reviewCount + "]"; }
+	 
 }

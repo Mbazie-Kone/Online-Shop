@@ -15,19 +15,20 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "categories")
 public class Category {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "category_id")
 	private Long id;
-	
+
 	private String name;
-	
+
 	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Product> products;
-	
-	public Category() {}
-	
+
+	public Category() {
+	}
+
 	public Category(String name) {
 		this.name = name;
 	}
@@ -40,13 +41,10 @@ public class Category {
 		this.name = name;
 	}
 
-	public List<Product> getProducts() {
-		return products;
-	}
-
-	public void setProducts(List<Product> products) {
-		this.products = products;
-	}
+	/*
+	 * // public List<Product> getProducts() { // return products; // } // // public
+	 * void setProducts(List<Product> products) { // this.products = products; // }
+	 */
 
 	@Override
 	public int hashCode() {
@@ -70,4 +68,5 @@ public class Category {
 	public String toString() {
 		return "Category [id=" + id + ", name=" + name + ", products=" + products + "]";
 	}
+
 }
