@@ -20,9 +20,7 @@ public class ProductRestController {
 	@GetMapping
 	public List<Product> products() {
 		
-		List<Product> products = productService.findAllProducts();
+		return productService.findAllProducts();
 		
-		return products;
 	}
-
 }

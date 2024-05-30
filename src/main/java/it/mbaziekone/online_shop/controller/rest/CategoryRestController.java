@@ -20,10 +20,7 @@ public class CategoryRestController {
 	@GetMapping
 	public List<Category> findAllCategories() {
 		
-		List<Category> categories = categoryService.findAllCategories();
-		
-		return categories;
+		return categoryService.findAllCategories();
 		
 	}
-
 }
