@@ -10,7 +10,7 @@ import it.mbaziekone.online_shop.model.Category;
 import it.mbaziekone.online_shop.service.CategoryService;
 
 @RestController
-@RequestMapping("api/products")
+@RequestMapping("api/categories")
 public class CategoryRestController {
 	
 	@Autowired
