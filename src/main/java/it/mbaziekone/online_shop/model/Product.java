@@ -14,35 +14,36 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Products")
 public class Product {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "product_id")
 	private Long id;
-	
+
 	private String name;
-	
+
 	private String description;
-	
+
 	private double price;
-	
+
 	@Column(name = "stock_quantity")
 	private int stockQuantity;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Category category;
-	
+
 	@Column(name = "image_url")
 	private String imageUrl;
-	
+
 	@Column(name = "average_rating")
 	private double averageRating;
-	
+
 	@Column(name = "review_count")
 	private int reviewCount;
 
-	public Product() {}
+	public Product() {
+	}
 
 	public Product(Long id, String name, String description, double price, int stockQuantity, Category category,
 			String imageUrl, double averageRating, int reviewCount) {
@@ -143,11 +144,11 @@ public class Product {
 				&& reviewCount == other.reviewCount && stockQuantity == other.stockQuantity;
 	}
 
-	
-	  @Override public String toString() { return "Product [id=" + id + ", name=" +
-	  name + ", description=" + description + ", price=" + price +
-	  ", stockQuantity=" + stockQuantity + ", category=" + category + ", imageUrl="
-	  + imageUrl + ", averageRating=" + averageRating + ", reviewCount=" +
-	  reviewCount + "]"; }
-	 
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", description=" + description + ", price=" + price
+				+ ", stockQuantity=" + stockQuantity + ", category=" + category + ", imageUrl=" + imageUrl
+				+ ", averageRating=" + averageRating + ", reviewCount=" + reviewCount + "]";
+	}
+
 }
