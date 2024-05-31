@@ -14,7 +14,8 @@ public class SecurityConfig {
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		
-		http.authorizeHttpRequests(authorize -> authorize.requestMatchers("/blog/**").permitAll().anyRequest().authenticated()
+		http.authorizeHttpRequests(authorize -> authorize.requestMatchers("/admin/**").hasRole("ADMIN")
+				.requestMatchers("/user/**").hasRole("USER").anyRequest().authenticated()
 		).formLogin(formLogin -> formLogin.loginPage("/login").permitAll()
 		).rememberMe(Customizer.withDefaults());
 		
