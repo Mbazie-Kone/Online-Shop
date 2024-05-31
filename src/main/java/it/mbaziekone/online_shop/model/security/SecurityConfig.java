@@ -10,16 +10,16 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-	
+
 	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		
+	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
 		http.authorizeHttpRequests(authorize -> authorize.requestMatchers("/admin/**").hasRole("ADMIN")
-				.requestMatchers("/user/**").hasRole("USER").anyRequest().authenticated()
-		).formLogin(formLogin -> formLogin.loginPage("/login").permitAll()
-		).rememberMe(Customizer.withDefaults());
-		
+				.requestMatchers("/user/**").hasRole("USER").anyRequest().authenticated())
+				.formLogin(formLogin -> formLogin.loginPage("/login").permitAll())
+				.rememberMe(Customizer.withDefaults());
+
 		return http.build();
-		
+
 	}
 }
