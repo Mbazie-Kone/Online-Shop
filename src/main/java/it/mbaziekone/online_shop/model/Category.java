@@ -1,5 +1,6 @@
 package it.mbaziekone.online_shop.model;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
@@ -14,7 +15,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "categories")
-public class Category {
+public class Category implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
