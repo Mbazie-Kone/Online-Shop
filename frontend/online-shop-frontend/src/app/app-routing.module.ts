@@ -6,8 +6,8 @@ import { UserDashboardComponent } from './components/user-dashboard/user-dashboa
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent },
-  {path: 'admin', component: AdminDashboardComponent },
-  {path: 'user', component: UserDashboardComponent },
+  {path: 'admin', component: AdminDashboardComponent, canActivate: [AuthGuard], data: {roles: ['ADMIN'] } },
+  {path: 'user', component: UserDashboardComponent, canActivate: [AuthGuard], data: { roles: ['USER'] } },
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
 
