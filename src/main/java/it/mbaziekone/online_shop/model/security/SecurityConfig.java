@@ -2,6 +2,7 @@ package it.mbaziekone.online_shop.model.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
@@ -14,7 +15,8 @@ public class SecurityConfig {
 	SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		
 		http.authorizeHttpRequests(authorize -> authorize.requestMatchers("/admin/**").hasRole("ADMIN")
-				.requestMatchers("/user/**").hasRole("USER").requestMatchers("/login/**").permitAll().anyRequest().authenticated());
+				.requestMatchers("/user/**").hasRole("USER").requestMatchers("/login/**").permitAll().anyRequest().authenticated())
+		.formLogin(formLogin -> formLogin.loginPage("/login").permitAll()).rememberMe(Customizer.withDefaults());
 		
 		return http.build();
 	}
