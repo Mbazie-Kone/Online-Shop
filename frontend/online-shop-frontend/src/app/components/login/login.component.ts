@@ -20,7 +20,7 @@ export class LoginComponent {
         this.router.navigate(['/admin']);
       }
       else if(data.role === 'USER') {
-        this.router.navigate(['/user'])
+        this.router.navigate(['/user']);
       }
     })
   }
