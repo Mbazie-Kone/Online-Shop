@@ -9,7 +9,7 @@ export class PermissionsService {
 
   constructor(private authService: AuthService, private router: Router) { }
 
-  canActive(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+  /*canActive(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
 
     const currentUser = this.authService.isLoggedIn();
     if(currentUser) {
@@ -23,8 +23,8 @@ export class PermissionsService {
     this.router.navigate(['/login']);
     return false;
   }
-}
+}*/
 
-export const AuthGuard: CanActivateFn = (next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean => {
-  return inject(PermissionsService).canActive(next,state);
+/*export const AuthGuard: CanActivateFn = (next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean => {
+  return inject(PermissionsService).canActive(next,state);*/
 }

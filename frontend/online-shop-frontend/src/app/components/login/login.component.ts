@@ -22,6 +22,6 @@ export class LoginComponent {
       else if(data.role === 'USER') {
         this.router.navigate(['/user']);
       }
-    })
+    });
   }
 }
