@@ -23,4 +23,12 @@ public class UserRestController {
 		
 		return ResponseEntity.ok("User registered successfully");
 	}
+	
+	@PostMapping("/login")
+	public ResponseEntity<?> authenticateUser(@RequestBody User user) {
+		
+		// authentication
+		
+		return ResponseEntity.ok("User authenticated successfully");
+	}
 }
