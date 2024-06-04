@@ -20,5 +20,7 @@ public class UserRestController {
 	@PostMapping("/register")
 	public ResponseEntity<?> registerUser(@RequestBody User user) {
 		userService.saveUser(user);
+		
+		return ResponseEntity.ok("User registered successfully");
 	}
 }
