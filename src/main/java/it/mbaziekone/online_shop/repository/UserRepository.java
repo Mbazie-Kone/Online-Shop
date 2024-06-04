@@ -6,5 +6,8 @@ import it.mbaziekone.online_shop.model.security.User;
 
 
 public interface UserRepository extends JpaRepository<User, Long> {
-	User findByUsername(String username);
+	
+	public User findByUsername(String username);
+	
+	public User saveUser(User user);
 }
