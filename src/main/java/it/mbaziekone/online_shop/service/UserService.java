@@ -1,5 +1,8 @@
 package it.mbaziekone.online_shop.service;
 
-public interface UserService {
+import it.mbaziekone.online_shop.model.security.User;
 
+public interface UserService {
+	
+	public User saveUser(User user);
 }
