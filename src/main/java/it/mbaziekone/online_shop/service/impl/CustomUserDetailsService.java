@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import it.mbaziekone.online_shop.model.security.Role;
 import it.mbaziekone.online_shop.model.security.User;
 import it.mbaziekone.online_shop.repository.UserRepository;
 
@@ -25,7 +26,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 		if(user == null) {
 			throw new UsernameNotFoundException("User not found");
 		}
-		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), getAuthorities(user));
+		return new org.springframework.security.core.userdetails.User(
+				user.getUsername(), user.getPassword(), user.getRoles().stream().map(role -> new));
 	}
 	
 	private Collection<? extends GrantedAuthority> getAuthorities(User user) {
