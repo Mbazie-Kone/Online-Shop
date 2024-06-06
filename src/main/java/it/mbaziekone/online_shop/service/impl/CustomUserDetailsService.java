@@ -1,16 +1,13 @@
 package it.mbaziekone.online_shop.service.impl;
 
-import java.util.Collection;
-import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import it.mbaziekone.online_shop.model.security.Role;
 import it.mbaziekone.online_shop.model.security.User;
 import it.mbaziekone.online_shop.repository.UserRepository;
 
@@ -27,11 +24,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 			throw new UsernameNotFoundException("User not found");
 		}
 		return new org.springframework.security.core.userdetails.User(
-				user.getUsername(), user.getPassword(), user.getRoles().stream().map(role -> new));
-	}
-	
-	private Collection<? extends GrantedAuthority> getAuthorities(User user) {
-		
-		return List.of(new SimpleGrantedAuthority("ROLE_" + user.getRoles()));
+				user.getUsername(), user.getPassword(), user.getRoles().stream()
+				.map(role -> new SimpleGrantedAuthority("ROLE_" + role.getRoleName())).collect(Collectors.toList()));
 	}
 }
