@@ -11,17 +11,13 @@ export class LoginComponent {
   username: string;
   password: string;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService) {}
 
-  onSubmit(): void {
+  login(): void {
     this.authService.login(this.username, this.password).subscribe(data => {
-      localStorage.setItem('token', data.token);
-      if(data.role === 'ADMIN') {
-        this.router.navigate(['/admin']);
-      }
-      else if(data.role === 'USER') {
-        this.router.navigate(['/user']);
-      }
+      console.log('login success:', data);
+    }, error => {
+      console.log('login failed', error);
     });
   }
 }
