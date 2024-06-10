@@ -7,19 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:8080';
+  private loginUrl = 'api/login';
 
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/login`, {username, password});
-  }
-
-  isLoggedIn(): boolean {
-    return !!localStorage.getItem('token');
-  }
-
-  logout(): void {
-    localStorage.removeItem('token');
+    return this.http.post<any>(`${this.loginUrl}/login`, {username, password});
   }
 }
