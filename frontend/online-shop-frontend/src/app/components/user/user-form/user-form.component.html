@@ -1,0 +1,8 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="example-form">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome Utente</mat-label>
+      <input matInput formControlName="name" placeholder="Inserisci il nome dell'utente">
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" type="submit">Aggiungi Utente</button>
+  </form>
