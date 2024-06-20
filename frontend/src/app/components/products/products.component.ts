@@ -13,7 +13,11 @@ export class ProductsComponent implements OnInit {
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+   this.productsService.getProducts().subscribe (
+    data => {
+      this.products = data;
+    }
+   )
   }
 
 }
