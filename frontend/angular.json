@@ -35,10 +35,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "css/style.css"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
