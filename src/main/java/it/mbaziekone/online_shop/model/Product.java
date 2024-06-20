@@ -94,12 +94,6 @@ public class Product implements Serializable {
 		this.stockQuantity = stockQuantity;
 	}
 
-	/*
-	 * public Category getCategory() { return category; }
-	 * 
-	 * public void setCategory(Category category) { this.category = category; }
-	 */
-
 	public String getImageUrl() {
 		return imageUrl;
 	}
