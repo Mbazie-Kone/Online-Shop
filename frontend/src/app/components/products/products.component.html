@@ -1,26 +1,24 @@
-<div class="container mt-5">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Average Rating</th>
-        <th>Description</th>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Review Count</th>
-        <th>Stock Quantity</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of products">
-        <td>{{ product.id }}</td>
-        <td>{{ product.averageRating }}</td>
-        <td>{{ product.description }}</td>
-        <td>{{ product.image }}</td>
-        <td>{{ product.name }}</td>
-        <td>{{ product.reviewCount }}</td>
-        <td>{{ product.stockQuantity }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<table border="2px">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Average Rating</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Review Count</th>
+      <th>Stock Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.averageRating }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.image }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.reviewCount }}</td>
+      <td>{{ product.stockQuantity }}</td>
+    </tr>
+  </tbody>
+</table>
