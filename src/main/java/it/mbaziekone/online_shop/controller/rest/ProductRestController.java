@@ -25,7 +25,9 @@ public class ProductRestController {
 	
 	@GetMapping
 	public List<Product> products() {
+		log.info("Request available");
 		List<Product> products = productService.findAllProducts();
+		log.info("Products: {}", products);
 		return products;		
 	}
 }
