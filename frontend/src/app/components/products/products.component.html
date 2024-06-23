@@ -1,11 +1,10 @@
 <table border="2px">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Average Rating</th>
-      <th>Description</th>
-      <th>Image</th>
       <th>Name</th>
+      <th>Description</th>
+      <th>Average Rating</th>
+      <th>Image</th>
       <th>Price</th>
       <th>Review Count</th>
       <th>Stock Quantity</th>
@@ -13,11 +12,10 @@
   </thead>
   <tbody>
     <tr *ngFor="let product of products">
-      <td>{{ product.id }}</td>
-      <td>{{ product.averageRating }}</td>
-      <td>{{ product.description }}</td>
-      <td>{{ product.image }}</td>
       <td>{{ product.name }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.averageRating }}</td>
+      <td>{{ product.image }}</td>
       <td>{{ product.price}}</td>
       <td>{{ product.reviewCount }}</td>
       <td>{{ product.stockQuantity }}</td>
