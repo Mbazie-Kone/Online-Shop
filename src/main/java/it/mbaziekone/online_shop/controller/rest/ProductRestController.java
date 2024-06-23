@@ -2,8 +2,8 @@ package it.mbaziekone.online_shop.controller.rest;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+// import org.slf4j.Logger;
+// import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,13 +21,13 @@ public class ProductRestController {
 	@Autowired
 	private ProductService productService;
 	
-	private final Logger log = LoggerFactory.getLogger(ProductRestController.class);
+	// private final Logger log = LoggerFactory.getLogger(ProductRestController.class);
 	
 	@GetMapping
 	public List<Product> products() {
-		log.info("Request available");
+		// log.info("Request available");
 		List<Product> products = productService.findAllProducts();
-		log.info("Products: {}", products);
+		// log.info("Products: {}", products);
 		return products;		
 	}
 }
