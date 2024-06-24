@@ -17,7 +17,7 @@
         <td>{{ product.description }}</td>
         <td>{{ product.averageRating }}</td>
         <td>{{ product.image }}</td>
-        <td>{{ product.price }}</td>
+        <td>{{ product.price | currency : 'EUR'}}</td>
         <td>{{ product.reviewCount }}</td>
         <td>{{ product.stockQuantity }}</td>
       </tr>
